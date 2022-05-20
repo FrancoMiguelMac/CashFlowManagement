@@ -1,20 +1,29 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+#Como subir aplicação local:
+Para subir a aplicação local basta clonar esse repositório, abrir o projeto no visual studio e dar play no projeto web api CashFlowManagement.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+#Como simular os serviços:
+A api possui 3 endpoints:
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+1) Http post para registrar os lançamentos:
+Exemplo de contrato pra registrar um crédito:
+{
+  "description": "Venda de cerveja",
+  "value": 10,
+  "cashFlowTypeId": "223c9d39-7635-4625-80e1-a341e0497a0a"
+}
+Exemplo de contrato pra registrar um débito:
+{
+  "description": "Compra de cerveja",
+  "value": 5.99,
+  "cashFlowTypeId": "7b24b08d-c18a-416b-b17d-704e221c8bb7"
+}
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+2) Http get para retornar todos os lançamentos detalhados do dia
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+3) Http get para retornar o consolidado diário em saldo
+
+
+#Observações importantes sobre o projeto:
+1)Dados armazenados somente no MemoryCache da aplicação. Portanto enquanto o servidor tiver "vivo" os dados estarão lá. Quando derrubar e subir de novo irá resetar os dados.
+2)Foi usado o FluentValidation nas validações de domínio
+3)Foram escritos testes para as regras de domínio usando xunit.
