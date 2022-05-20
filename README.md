@@ -24,6 +24,9 @@ Exemplo de contrato pra registrar um débito:
 
 
 #Observações importantes sobre o projeto:
+
 1)Dados armazenados somente no MemoryCache da aplicação. Portanto enquanto o servidor tiver "vivo" os dados estarão lá. Quando derrubar e subir de novo irá resetar os dados.
-2)Foi usado o FluentValidation nas validações de domínio
+
+2)Foi usado o FluentValidation nas validações de domínio.
+
 3)Foram escritos testes para as regras de domínio usando xunit.
