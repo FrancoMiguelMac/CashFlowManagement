@@ -32,3 +32,5 @@ Exemplo de contrato pra registrar um débito:
 2)Foi usado o FluentValidation nas validações de domínio.
 
 3)Foram escritos testes para as regras de domínio usando xunit.
+
+4)Para rodar os testes basta usar o Geranciador de testes do visual studio.
