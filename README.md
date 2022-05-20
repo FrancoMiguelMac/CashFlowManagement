@@ -5,12 +5,14 @@ Para subir a aplicação local basta clonar esse repositório, abrir o projeto n
 A api possui 3 endpoints:
 
 1) Http post para registrar os lançamentos:
+
 Exemplo de contrato pra registrar um crédito:
 {
   "description": "Venda de cerveja",
   "value": 10,
   "cashFlowTypeId": "223c9d39-7635-4625-80e1-a341e0497a0a"
 }
+
 Exemplo de contrato pra registrar um débito:
 {
   "description": "Compra de cerveja",
