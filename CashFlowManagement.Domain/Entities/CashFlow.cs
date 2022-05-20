@@ -29,5 +29,26 @@ namespace CashFlowManagement.Domain.Entities
             ValidationResult = new CashFlowValidation().Validate(this);
             return ValidationResult.IsValid;
         }
+
+        public void UpdateDescription(string description)
+        {
+            Description = description;
+            ModifiedDate = DateTime.Now;
+        }
+
+        public void UpdateValue(decimal value)
+        {
+            Value = value;
+            ModifiedDate = DateTime.Now;
+        }
+
+        public void UpdateCashflowType(Guid cashFlowTypeId)
+        {
+            if (cashFlowTypeId == CashFlowTypeStatic.Debit.Id)
+                Value *= -1;
+
+            CashFlowTypeId = cashFlowTypeId;
+            ModifiedDate = DateTime.Now;
+        }
     }
 }
