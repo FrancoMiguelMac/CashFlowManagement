@@ -1,4 +1,4 @@
-#Como subir aplicação local:
+# Como subir aplicação local:
 Para subir a aplicação local basta clonar esse repositório, abrir o projeto no visual studio e dar play no projeto web api CashFlowManagement.
 
 #Como simular os serviços:
