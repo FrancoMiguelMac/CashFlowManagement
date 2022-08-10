@@ -1,7 +1,7 @@
 # Como subir aplicação local:
 Para subir a aplicação local basta clonar esse repositório, abrir o projeto no visual studio e dar play no projeto web api CashFlowManagement.
 
-#Como simular os serviços:
+# Como simular os serviços:
 A api possui 3 endpoints:
 
 1) Http post para registrar os lançamentos:
@@ -25,7 +25,7 @@ Exemplo de contrato pra registrar um débito:
 3) Http get para retornar o consolidado diário em saldo
 
 
-#Observações importantes sobre o projeto:
+# Observações importantes sobre o projeto:
 
 1)Dados armazenados somente no MemoryCache da aplicação. Portanto enquanto o servidor tiver "vivo" os dados estarão lá. Quando derrubar e subir de novo irá resetar os dados.
 
